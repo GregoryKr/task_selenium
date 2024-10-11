@@ -36,8 +36,8 @@ class SearchHelper(BasePage):
             photos_list.append(photo.size)
         print(photos_list)
         index = 0
-        while index < len(photos_list) - 1:
-
+        # while index < len(photos_list) - 1:
+        for item in photos_list:
             if (photos_list[index].get('height') != photos_list[index + 1].get('height') or
                     photos_list[index].get('width') != photos_list[index + 1].get('width')):
                 index += 1
