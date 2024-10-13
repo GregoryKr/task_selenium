@@ -1,4 +1,4 @@
-from BaseApp1 import BasePage
+from BaseApp import BasePage
 from selenium.webdriver.common.by import By
 
 # webpage class
@@ -12,6 +12,8 @@ class TenzorLocators:
 
 
 class SearchHelper(BasePage):
+    def __init__(self, driver, base_url):
+        super().__init__(driver, base_url)
 
     def open_tenzor_main_page(self):
         tenzor_link = self.find_element(TenzorLocators.TENZOR_BUNNER).get_attribute("href")

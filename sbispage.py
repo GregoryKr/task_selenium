@@ -19,6 +19,8 @@ class SbisLocators:
 
 
 class SearchHelper(BasePage):
+    def __init__(self, driver, base_url):
+        super().__init__(driver, base_url)
 
     def contacts_link(self):
         find_contacts = self.find_element(SbisLocators.CONTACTS)

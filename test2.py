@@ -1,8 +1,9 @@
 from sbispage import SearchHelper
 import time
 
+
 def test_sbis_page(browser):
-    sbis_main_page = SearchHelper(browser)
+    sbis_main_page = SearchHelper(browser, base_url='https://sbis.ru/')
     sbis_main_page.go_to_site()
     sbis_main_page.contacts_link()
     sbis_main_page.find_regions_contacts()
